@@ -1,0 +1,51 @@
+{
+    "name": "PlayerControl",
+    "maps": [
+        {
+            "name": "Controls",
+            "id": "6ce494ba-bca8-456e-8f19-d918228c89d8",
+            "actions": [
+                {
+                    "name": "Spell Cast",
+                    "type": "PassThrough",
+                    "id": "effe3e3d-7da9-48a4-bf47-44ea091caeca",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dbf16d38-4ae6-4dd1-a2c4-87e8c5ac35fc",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KBM",
+                    "action": "Spell Cast",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "KBM",
+            "bindingGroup": "KBM",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
