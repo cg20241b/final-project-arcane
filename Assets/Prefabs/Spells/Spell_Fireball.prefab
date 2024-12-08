@@ -4847,7 +4847,7 @@ GameObject:
   - component: {fileID: 6032424868810846691}
   m_Layer: 0
   m_Name: Spell_Fireball
-  m_TagString: Untagged
+  m_TagString: Spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

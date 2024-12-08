@@ -28,7 +28,7 @@ public class EnemyAiTutorial : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("PlayerObj").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -97,15 +97,28 @@ public class EnemyAiTutorial : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0) DestroyEnemy();
     }
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Triggered");
+        Debug.Log(other.tag);
+        if (other.CompareTag("Spell"))
+        {
+            // Assuming the projectile has a script with a damage amount
+            float damage = other.GetComponent<Spell>().spellToCast.DamageAmount;
+            Debug.Log("Damage: " + damage);
+            TakeDamage(damage);
+        }
     }
 
     private void OnDrawGizmosSelected()

@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemie
+  - Spell
   layers:
   - Default
   - TransparentFX
