@@ -201,7 +201,7 @@ public class PlayerController : MonoBehaviour
             verticalVelocity = -1f;
 
             if(Input.GetButtonDown("Jump")){
-                verticalVelocity = Mathf.Sqrt(jumpHeight * gravity *2);
+                verticalVelocity = Mathf.Sqrt(jumpHeight * gravity * 2);
             }
         }
         else {
